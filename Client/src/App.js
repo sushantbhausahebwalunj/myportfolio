@@ -16,6 +16,7 @@ import Experience from "./components/Experience";
 import EducationCard from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
+import { TroubleshootSharp } from "@mui/icons-material";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -30,11 +31,13 @@ const Wrapper = styled.div`
 `
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [mode ,  setMode]=useState(TroubleshootSharp)
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   // Function to handle Dark Mode Toggle
   function toggleDarkMode() {
     setDarkMode(!darkMode);
+    setMode(!mode)
   }
   function handleDarkModeToggle() {
     toggleDarkMode();
@@ -43,7 +46,7 @@ function App() {
   return (
     <ThemeProvider  theme={darkMode ? darkTheme : lightTheme}>
       <Router >
-      <Navbar handleDarkModeToggle={handleDarkModeToggle} />
+      <Navbar handleDarkModeToggle={handleDarkModeToggle} mode={mode} />
           <Body>
           <HeroSection />
           <Wrapper>

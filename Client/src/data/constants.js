@@ -2,7 +2,7 @@ export const Bio = {
     name: "Sushant Walunj",
     roles: [
       "Full Stack Developer",
-      "Android Developer",
+      
       "UI/UX Designer",
       "Programmer",
     ],
@@ -158,7 +158,7 @@ export const Bio = {
         "Node Js",
         "Express JS"
       ],
-      doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
+      doc: "./kodeZera_offer_letter.jpg",
     },
     {
       id: 0,
@@ -180,7 +180,7 @@ export const Bio = {
         "MySQL",
         "Bootstrap"
       ],
-      doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
+      doc: "./arohisoftware_offer_letter.jpg",
     },
    
   ];
@@ -280,10 +280,10 @@ export const Bio = {
     },
     {
       id: 2,
-      title: "Brain Tumor Detection",
+      title: "E-commerce",
       date: "July 2023 - Aug 2023",
       description:
-        "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
+        "developed client side of e-commerce in learning phase to understand working of redux and gained experience over it ",
       image:
         "./Screenshot 2024-05-25 150726.png",
       tags: ["React js", "Redux", "Javascript", "CSS", "HTML", ],

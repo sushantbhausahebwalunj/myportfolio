@@ -5,14 +5,28 @@ import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+import SettingsBrightnessRoundedIcon from '@mui/icons-material/SettingsBrightnessRounded';
+import SettingsBrightnessTwoToneIcon from '@mui/icons-material/SettingsBrightnessTwoTone';
+import { Button } from '@mui/material';
+import { useState } from 'react';
 
-const Navbar = ({handleDarkModeToggle}) => {
+const Navbar = ({handleDarkModeToggle,mode}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/' onClick={handleDarkModeToggle}>
+
+      <Button onClick={handleDarkModeToggle} 
+        style={{
+          color: mode ? 'white' : 'black',
+      
+        }}
+      >
+        <SettingsBrightnessTwoToneIcon style={{ fontSize: "2rem" }} />
+      </Button>
+
+        <NavLogo to='/' >
           <a style={{ display: "flex", alignItems: "center", color: "orange", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
           </a>
@@ -23,6 +37,8 @@ const Navbar = ({handleDarkModeToggle}) => {
           }} />
         </MobileIcon>
         <NavItems>
+        
+
           <NavLink href="#about">About</NavLink>
           <NavLink href='#skills'>Skills</NavLink>
           <NavLink href='#experience'>Experience</NavLink>
@@ -34,6 +50,7 @@ const Navbar = ({handleDarkModeToggle}) => {
         </ButtonContainer>
         {
           isOpen &&
+          
           <MobileMenu isOpen={isOpen}>
             <MobileLink href="#about" onClick={() => {
               setIsOpen(!isOpen)
@@ -51,6 +68,7 @@ const Navbar = ({handleDarkModeToggle}) => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
             <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+
           </MobileMenu>
         }
       </NavbarContainer>
